@@ -5,7 +5,7 @@ MAINTAINER Michaël Rigart <michael@netronix.be>
 RUN echo "====> Installing sudo... <====" && \
     dnf -y install sudo && \
     \
-    \ 
+    \
     echo "====> Installing Ansible... <====" && \
     dnf -y install ansible && \
     \
