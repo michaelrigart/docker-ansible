@@ -10,6 +10,10 @@ RUN echo "====> Installing EPEL... <====" && \
     yum -y install sudo && \
     \
     \
+    echo "====> To avoid error: sudo: sorry, you must have a tty to run sudo... <====" && \
+    sed -i -e "s/Defaults    requiretty.*/ #Defaults    requiretty/g" /etc/sudoers && \
+    \
+    \
     echo "====> Installing Ansible... <====" && \
     yum -y install ansible && \
     \
